@@ -10,6 +10,8 @@ public class MusicOrganizer
 {
     // An ArrayList for storing the file names of music files.
     private ArrayList<String> files;
+    //atributo de indice valido o no.
+    private boolean valido;
         
     /**
      * Create a MusicOrganizer
@@ -17,6 +19,7 @@ public class MusicOrganizer
     public MusicOrganizer()
     {
         files = new ArrayList<String>();
+        boolean valido = false;
     }
     
     /**
@@ -75,6 +78,14 @@ public class MusicOrganizer
         else 
         {
                System.out.println("La coleccion esta vacia");
+        }
+    }
+    public void validIndex(int index)
+    {
+        int limite = files.size() - 1;  
+        if(index >= 0 && index <= limite) 
+        {
+               valido = true;
         }
     }
 }
