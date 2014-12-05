@@ -59,4 +59,22 @@ public class MusicOrganizer
             files.remove(index);
         }
     }
+     /**
+     * List a file from the collection.
+     * @param index The index of the file to be listed.
+     */
+    public void checkIndex(int index)
+    {
+        int limite = files.size() - 1;
+        if (getNumberOfFiles() != 0)
+        {
+            if(index < 0 || index > limite) {
+               System.out.println("Ese no es un valor correcto, el valor tiene que estar entre 0 y " + limite);
+            }
+        }
+        else 
+        {
+               System.out.println("La coleccion esta vacia");
+        }
+    }
 }
